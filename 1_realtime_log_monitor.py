@@ -12,7 +12,7 @@ def mock_send_email(error_line):
     """Mock email alert function"""
     print(f"📧 ALERT EMAIL SENT: {error_line.strip()}")
 
-def monitor_log(log_file_path="/var/log/app.log"):
+def monitor_log(log_file_path="/home/gideon/Desktop/PHASE 3/Assessment_prep/test-log.log"):
     """Monitor log file for ERROR entries in real-time"""
     if not os.path.exists(log_file_path):
         print(f"Creating mock log file: {log_file_path}")
