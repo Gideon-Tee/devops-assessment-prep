@@ -79,11 +79,37 @@ python3 6_log_uploader.py
 # Uses httpbin.org for testing
 ```
 
+### 7. System Resource Monitor (`7_system_resource_monitor.py`)
+**Problem**: Monitor CPU and memory usage, send alerts when exceeding 80%
+- Real-time CPU and memory monitoring
+- Configurable thresholds
+- Mock email alerts for high usage
+
+**Usage**:
+```bash
+python3 7_system_resource_monitor.py
+# Monitors system resources every 10 seconds
+# Press Ctrl+C to stop
+```
+
+### 8. Cron Job Setup (`8_cron_job_setup.py`)
+**Problem**: Create cron job to run script daily at midnight with logging
+- Creates sample maintenance script
+- Sets up daily cron job at 00:00
+- Configures logging to file
+
+**Usage**:
+```bash
+sudo python3 8_cron_job_setup.py
+# Run as root for system-wide setup
+# Creates /usr/local/bin/daily_maintenance.sh
+```
+
 ## Requirements
 
 Install required packages:
 ```bash
-pip3 install requests
+pip3 install requests psutil
 ```
 
 ## Key Features Demonstrated
@@ -105,5 +131,7 @@ pip3 install requests
 4. **Archiver**: Adjust `days_old` parameter for testing
 5. **Data Aggregator**: Try different API endpoints
 6. **Log Uploader**: Test with various file sizes
+7. **Resource Monitor**: Use `stress` command to simulate high CPU/memory usage
+8. **Cron Setup**: Check with `crontab -l` and test script manually first
 
 Each script includes comprehensive error handling and can be easily modified for specific requirements.
